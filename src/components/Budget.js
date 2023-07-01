@@ -18,12 +18,12 @@ const Budget = () => {
       }
       const budgetValue = parseInt(value);
       if (budgetValue < totalExpenses) {
-         alert("The budget cannot be less than amount spent £" + totalExpenses);
+         alert("You cannot reduce the budget value lower than the spending");
          setValue(budget);
          return;
       }
       if (budgetValue > 20000) {
-         alert("The budget cannot be greater than £ 20,000 ");
+         alert("The budget cannot be greater than 20,000 ");
          setValue(budget);
          return;
       }
