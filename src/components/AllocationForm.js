@@ -20,7 +20,7 @@ const AllocationForm = (props) => {
       };
       if (action === "Reduce") {
          if (-1*costValue > remaining) {
-            alert("The value cannot exceed remaining funds  £" + remaining);
+            alert("The value cannot exceed remaining funds " + currency + " " + remaining);
             setCost("");
             return;
          }
@@ -30,7 +30,7 @@ const AllocationForm = (props) => {
          });
       } else {
          if (costValue > remaining) {
-            alert("The value cannot exceed remaining funds  £" + remaining);
+            alert("The value cannot exceed remaining funds " + currency + " " + remaining);
             setCost("");
             return;
          }
@@ -40,6 +40,14 @@ const AllocationForm = (props) => {
          });
       }
    };
+
+   const handleChangeBudget = (event) => {
+      if (event.target.value === "" || isNaN(event.target.value) || isNaN(parseInt(event.target.value))) {
+         setCost("");
+         return;
+      }
+      setCost(event.target.value);
+   }
 
    return (
       <div>
@@ -96,7 +104,7 @@ const AllocationForm = (props) => {
                   id="cost"
                   value={cost}
                   style={{ marginLeft: "0.5rem", size: 10 }}
-                  onChange={(event) => setCost(event.target.value)}
+                  onChange={handleChangeBudget}
                ></input>
                <button
                   className="btn btn-primary"

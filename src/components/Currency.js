@@ -15,7 +15,7 @@ const Currency = () => {
    return (
       <div className='alert alert-secondary'>
       <select
-         className="custom-select form-control"
+         className="custom-select form-control list-currencies"
          id="inputGroupSelect04"
          onChange={(event) => submitEvent(event.target.value)}
       >

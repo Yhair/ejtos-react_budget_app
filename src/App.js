@@ -36,12 +36,14 @@ const App = () => {
                   <Currency />
                </div>
             </div>
+            <h2 className="mt-3">Allocation</h2>
             <div className="row mt-3">
                    {/* Add ExpenseList component here under */}
                <div className="col-sm">
                   <ExpenseList />
                </div>
             </div>
+            <h2 className="mt-3">Change Allocation</h2>
             <div className="row mt-3">
                    {/* Add AllocationForm component here under */}
                <div className="col-sm">

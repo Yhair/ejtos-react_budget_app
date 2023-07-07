@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+select.list-currencies {
+  background-color: lightgreen;
+  font-weight: 600;
+  color: white;
+}
+
+select.list-currencies option {
+  background-color: lightgreen;
+  font-weight: 600;
+}
+
+select.list-currencies option:focus {
+  background-color: white;
+}
+
+select.list-currencies:checked {
+  background-color: lightgreen; 
+}
